@@ -1,12 +1,13 @@
 import streamlit as st
 import requests
+import os 
 from dotenv import load_dotenv
 
 load_dotenv()
-url = "http://127.0.0.1:8000/rag/query"
+url = f"ragyoutuber11.azurewebsites.net/rag/query?code={os.getenv('FUNCTION_APP_API')}"
 
 def main_layout():
-    st.markdown("# RAGtuber")
+    st.markdown("# RAGyoutuber")
     st.markdown("An expert YouTuber who knows a lot of Data Engineering!")
     text_input = st.text_input(label="Ask me a question or send a message", key="user_input")
     

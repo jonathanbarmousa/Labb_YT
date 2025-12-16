@@ -49,7 +49,7 @@ Huvudmålet är att förbättra lärandeupplevelsen genom att använda det tillh
 
 - Öppna API-dokumentationen i din webbläsare:
 
-http://127.0.0.1:8000/docs
+http://127.0.0.1:7001/docs
 
 Här kan du prova några frågor eller meddelanden, och chatboten kommer att svara baserat på kunskapsbasen.
 

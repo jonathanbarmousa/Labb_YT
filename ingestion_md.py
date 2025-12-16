@@ -14,24 +14,25 @@ def setup_db(path):
 
 # Ingesting markdown files to Vector database
 def md_ingestion(table):
-    for files in DATA_PATH.glob("*.md"):  
-        with open(files, "r", encoding="utf-8") as file:
-            content = file.read()
+    for file in DATA_PATH.glob("*.md"):  
+        with open(file, "r", encoding="utf-8") as f:
+            content = f.read()
             
-        transcript_id = files.stem
+        transcript_id = file.stem
         table.delete(f"transcript_id = '{transcript_id}'") # Delete old table if exists
         table.add([
             {
                 "transcript_id": transcript_id,
-                "source": files.stem,
+                "source": file.name,
                 "content": content
             }
         ]) 
         
+        print(f"File ingested: {file.name}")
         print(table.to_pandas()["transcript_id"])   
         time.sleep(20)
         
 
 if __name__ == '__main__':
     vector_db = setup_db(VECTOR_DATABASE_PATH)
-    md_ingestion(vector_db["transcripts"])      
+    md_ingestion(vector_db["transcripts"])
