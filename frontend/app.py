@@ -4,7 +4,7 @@ import os
 from dotenv import load_dotenv
 
 load_dotenv()
-url = f"ragyoutuber11.azurewebsites.net/rag/query?code={os.getenv('FUNCTION_APP_API')}"
+url = f"https://ragyoutuber11.azurewebsites.net/rag/query?code={os.getenv('FUNCTION_APP_API')}"
 
 def main_layout():
     st.markdown("# RAGyoutuber")

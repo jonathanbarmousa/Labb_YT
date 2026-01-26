@@ -42,14 +42,14 @@ Huvudmålet är att förbättra lärandeupplevelsen genom att använda det tillh
 
 # 3. Testa FastAPI Backend
 
-- För att starta FastAPI backend för att testa, kör:
+- För att starta FastAPI backend, testa kör:
 
     uv run uvicorn api:app --reload
 
 
 - Öppna API-dokumentationen i din webbläsare:
 
-http://127.0.0.1:7001/docs
+http://127.0.0.1:8000/docs
 
 Här kan du prova några frågor eller meddelanden, och chatboten kommer att svara baserat på kunskapsbasen.
 
