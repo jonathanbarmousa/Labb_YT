@@ -1,4 +1,4 @@
-# RAG Lab - YouTuber Chatbot
+# 🤖 RAG Lab - YouTuber Chatbot
 
 Detta projekt syftar till att skapa en RAG (Retrieval-Augmented Generation) chatbot som svarar på frågor om Data Engineering baserat på transkript från en YouTuber som lär ut Data Engineering. Projektet använder PydanticAI, LanceDB, FastAPI och Streamlit.
 
